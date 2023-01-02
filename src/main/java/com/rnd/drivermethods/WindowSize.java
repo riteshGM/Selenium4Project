@@ -10,7 +10,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class WindowSize {
 
 	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
+
+		/**
+		 * Window Size Samples Size and Position
+		 */
 		WebDriver driver = new ChromeDriver();		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(2));
