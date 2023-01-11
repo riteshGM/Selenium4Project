@@ -1,40 +1,33 @@
-package com.rnd.drivermethods;
+package com.rnd.Locators;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class JavaScriptExecutor {
+public class WebElements {
 
 	public static void main(String[] args) throws InterruptedException {
-		/**
-		 * Java Script Executor Sample
-		 */
+		// TODO Auto-generated method stub
 		WebDriver driver = new ChromeDriver();		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(2));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+		driver.manage().window().maximize();
 		//Launch URL
-		driver.get("http://google.com");
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-
-		WebElement button = driver.findElement(By.name("btnI"));
-
-		js.executeScript("arguments[0].click();",button);
-		Thread.sleep(10000);
-		if(driver.getTitle().equals("Google Doodles")) {
-			System.out.println("Title Matched");	
-		}else {
-			System.out.println("Title Not Matched");
+		driver.get("https://trytestingthis.netlify.app/");
+		List<WebElement> options = driver.findElements(By.name("Optionwithcheck[]"));
+		System.out.println("Total Elements Found "+options.size());
+		for (WebElement eachOPtion: options) {
+			System.out.println(eachOPtion);
+			System.out.println(eachOPtion.getText());
 		}
-
+		
+		Thread.sleep(3000);
 		driver.quit();
-
-
 	}
 
 }
