@@ -8,6 +8,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+/**
+ * Write a Program to Check if Element is Highlighted Or Not On a Web Page
+ * @author rites
+ *
+ */
 public class CheckWebElementHighlighted {
 
 	public static void main(String[] args) throws InterruptedException {
