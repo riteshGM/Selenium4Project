@@ -28,8 +28,8 @@ public class WebTablePuzzle {
 		int rowsCount = driver.findElements(By.xpath("//table[@class='tsc_table_s13']/tbody/tr")).size();
 		//Find Targeted Rows and Columns and Store in a Map
 		for(int rowIndex =1; rowIndex<=rowsCount ; rowIndex++) {
-			String key = driver.findElement(By.xpath("(//table[@class='tsc_table_s13']/tbody/tr["+rowIndex+"]/*)["+1+"]")).getText();
-			String value = driver.findElement(By.xpath("(//table[@class='tsc_table_s13']/tbody/tr["+rowIndex+"]/*)["+4+"]")).getText();
+			String key = driver.findElement(By.xpath("(//table[@class='tsc_table_s13']/tbody/tr["+rowIndex+"]/*)[1]")).getText();
+			String value = driver.findElement(By.xpath("(//table[@class='tsc_table_s13']/tbody/tr["+rowIndex+"]/*)[4]")).getText();
 			value = value.substring(0, value.length()-1);
 			System.out.println(value);
 			Integer value1 = Integer.parseInt(value);
