@@ -26,13 +26,13 @@ public class CovidCasesGraghDataPuzzle {
 		driver.manage().window().maximize();
 		//Launch URL
 		driver.get("https://www.google.co.in/search?q=covid+cases+in+india&sxsrf=AJOqlzUn0RXPc8pQTVoZjjHB0qg7uXystw%3A1677238775374&source=hp&ei=96H4Y7HSFLib4-EP3NSPmAo&iflsig=AK50M_UAAAAAY_iwByni0ogroo3zPuuakXcD0WsDJcQp&oq=covid+cases&gs_lcp=Cgdnd3Mtd2l6EAMYATILCAAQsQMQyQMQkQIyCAgAELEDEJECMggIABCxAxCRAjIICAAQgAQQsQMyBQgAEIAEMggIABCABBCxAzIICAAQgAQQsQMyCAgAEIAEELEDMggIABCABBCxAzIHCAAQsQMQCjoECCMQJzoKCC4QxwEQrwEQJzoLCAAQsQMQgwEQkQI6DgguELEDEMcBENEDEJECOgsIABCABBCxAxCDAToRCC4QgAQQsQMQgwEQxwEQ0QM6BQgAELEDOgoIABCABBCxAxAKUABYsA1gvBpoAHAAeAGAAegDiAHBDZIBBzAuOS40LTGYAQCgAQE&sclient=gws-wiz");
-		
 		/**
 		 * We need two things here 
 		 * #1 index of each day in graph
 		 * #2 we need locator of tool-tip for each day or index in graph.
 		 */
 		
+		//Rect is Rectangle Shape being used to draw graph each day
 		String xpathGraphIndex = "//*[local-name()='svg' and @class='uch-psvg']//*[local-name()='g']//*[local-name()='rect']";
 		List <WebElement> indexElementsList = driver.findElements(By.xpath(xpathGraphIndex));
 		
